@@ -1,14 +1,15 @@
-console.log("SinopeSof Maile Sending Test");
+console.log("Welcome to csv json converter");
 let csvToJson = require('convert-csv-to-json');
+let fs = require('fs');
 
-let fileInputName = 'us-counties.csv'; 
-let fileOutputName = 'us-counties.json';
-csvToJson.generateJsonFileFromCsv(fileInputName,fileOutputName);
+let fileInputName = 'us-countries.csv'; 
+let fileOutputName = 'us-countries.json';
+csvToJson.fieldDelimiter(',').generateJsonFileFromCsv(fileInputName,fileOutputName);
 
 fileInputName = 'us.csv'; 
 fileOutputName = 'us.json';
-csvToJson.generateJsonFileFromCsv(fileInputName,fileOutputName);
+csvToJson.fieldDelimiter(',').generateJsonFileFromCsv(fileInputName,fileOutputName);
 
 fileInputName = 'us-states.csv'; 
 fileOutputName = 'us-states.json';
-csvToJson.generateJsonFileFromCsv(fileInputName,fileOutputName);
+csvToJson.fieldDelimiter(',').generateJsonFileFromCsv(fileInputName,fileOutputName);
